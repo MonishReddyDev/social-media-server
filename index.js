@@ -7,13 +7,19 @@ import cookieParser from "cookie-parser";
 const port = 6000
 const app = express()
 
+
 app.use(express.json())
 app.use(cookieParser())
 
 dbConfig()
 
 
+
+
 app.use("/api/auth", authrouter)
+
+
+
 
 app.listen(port, () => {
     console.log("app is running on port", port)
